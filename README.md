@@ -1,3 +1,6 @@
+# Urls
+- https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html
+
 # Setup of CDK
 
 ## Prerequisites for CDK installation
@@ -18,6 +21,18 @@ cdk --version # Verifying the version
 https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
 - Installing the AWS Toolkit for Visual Studio Code.
 - AWS CDK for VS Code.
+
+# CDK Architecture
+- CDK App(Main Container). `app = cdk.App()`. Creates the 'app' container.
+- CDK stack :- We can create multiple stacks. All stacks can be part of 'App'. This is defined using 'Stack' construct parameter 'scope'.
+
+## CDK Constructs
+- Construct provides 'abstact' over AWS resources. Most AWS services have their own 'Construct'.
+- Properties of 'Construct'.
+    - scope(stack)
+    - id 
+    - required/optional parameters
+- 
 
 
 # How CDK works
@@ -45,7 +60,7 @@ cdk bootstrap 193229017848/us-west-2
 
 # What happens in 'cdk_helloworld_stack.py'.
 - This code defines the resources we need to create for our application.
-- Our CloudFormation stack uses Base class 'Stack' `class CdkHelloworldStack(Stack)`.
+- Our CloudFormation stack extends Base class 'Stack' `class CdkHelloworldStack(Stack)`.
 - Then we initialize our stack `def __init__(self, scope: Construct, construct_id: str, **kwargs)`
     - First parameter 'self' is the object itself.
     - Second parameter 'scope'. Whose is the parent of this stack. In our case we are saying 'app' is parent of our stack.

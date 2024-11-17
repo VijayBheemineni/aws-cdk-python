@@ -4,7 +4,6 @@ import os
 import aws_cdk as cdk
 
 from cdk_helloworld.cdk_helloworld_stack import CdkHelloworldStack
-from cdk_helloworld.cdk_helloworld_stack2 import CdkHelloworldStack2
 
 
 app = cdk.App()
@@ -22,6 +21,5 @@ CdkHelloworldStack(
     # env=cdk.Environment(account='123456789012', region='us-east-1'),
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
 )
-CdkHelloworldStack2(app, "CdkHelloworldStack2")
 
 app.synth()
