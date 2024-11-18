@@ -34,6 +34,11 @@ https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
     - required/optional parameters
 - 
 
+## CDK Construct Levels
+- L1 :- Low Level Constructs. Starts with 'Cfn(Cloud Formation)<ResourceName>'. When used we must configure all the required properties. For example if we don't have AWS 'construct' and we need to create custom resource.
+- L2(Used most of times) :- AWS resources at higher level. AWS CDK has already implemented the code. This is a wrapper around AWS resources and we need to just use the 'Contruct' and provide very few properties. For example 'S3' construct.
+- L3 :- Patterns. Combines L1 and L2 resources. 
+
 
 # How CDK works
 Me --Write--> Python Code --JSII Compiler--> TypeScript --Execute-->CloudFormation --Deploy--> AWS 
@@ -75,6 +80,8 @@ cdk list # List all stacks in this app.
 cdk diff # See the diff between current changes and stack which is deployed
 cdk destroy # Destroy the stack
 cdk deploy <stack_name> # If multiple stack are deployed, list stack_name
+cdk doctor # Any problems or new versions.
+cdk destroy # Destroy the stack
 ```
 
 # Errors

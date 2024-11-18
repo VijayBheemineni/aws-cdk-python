@@ -4,6 +4,8 @@ from aws_cdk import (
     # aws_sqs as sqs,
     aws_s3 as s3,
     Duration,
+    CfnOutput,
+    RemovalPolicy,
 )
 from constructs import Construct
 
@@ -19,4 +21,7 @@ class CdkHelloworldStack(Stack):
             "VijayCDKStackNameS3",
             bucket_name="vijaycdktests3delete",
             lifecycle_rules=[s3.LifecycleRule(expiration=Duration.days(3))],
+            removal_policy=RemovalPolicy.DESTROY,
         )
+
+        CfnOutput(self, "VijayCDKBucketName", value=s3_bucket.bucket_name)
