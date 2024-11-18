@@ -65,6 +65,15 @@ cdk bootstrap 193229017848/us-west-2
 - With this file 'cdk_helloworld_stack.py' it create Python class 'CdkHelloworldStack'.
 - 'app.py' initializes the CDK app and then intializes 'CdkHelloworldStack' class.
 
+## CDK New Project steps
+```sh
+cdk init app --language python
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+```
+
 # What happens when we execute `cdk deploy`
 - CloudFormation stack with the name 'CdkHelloworldStack' is created.
 
