@@ -70,6 +70,7 @@ cdk bootstrap 193229017848/us-west-2
 
 # CDK commands
 ```sh
+# Make sure you log into CLI before executing below commands.
 cdk list # List all stacks in this app.
 cdk diff # See the diff between current changes and stack which is deployed
 cdk destroy # Destroy the stack
