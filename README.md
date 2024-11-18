@@ -39,6 +39,11 @@ https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
 - L2(Used most of times) :- AWS resources at higher level. AWS CDK has already implemented the code. This is a wrapper around AWS resources and we need to just use the 'Contruct' and provide very few properties. For example 'S3' construct.
 - L3 :- Patterns. Combines L1 and L2 resources. 
 
+## CDK IDs
+- Construct ID :- We provide in the 'Construct' initialization method.
+- Logical ID :- CDK will generate CloudFormation Logical ID. 'Construct ID' + 'Suffix from CDK'.
+- Physical ID :- resource name.
+
 
 # How CDK works
 Me --Write--> Python Code --JSII Compiler--> TypeScript --Execute-->CloudFormation --Deploy--> AWS 
