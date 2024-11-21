@@ -1,6 +1,6 @@
 @url = https://tlrsnznzf0.execute-api.us-west-2.amazonaws.com/prod/
 
-GET {{url}}/empl
+GET {{url}}/empl?id=65b74d25-8ecf-4929-97ce-0625e2beed1d
 ###
 
 POST {{url}}/empl

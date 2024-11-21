@@ -36,8 +36,13 @@ class CdkRestApiStack(Stack):
 
         # Create Api Gateway
         api = aws_apigateway.RestApi(self, "Empl-Api")
+        cors_options = aws_apigateway.CorsOptions(
+            allow_origins=aws_apigateway.Cors.ALL_ORIGINS,
+            allow_methods=aws_apigateway.Cors.ALL_METHODS,
+        )
+
         empl_resource = api.root.add_resource(
-            "empl",
+            "empl", default_cors_preflight_options=cors_options
         )
 
         # Integrate API Gateway with Lambda
