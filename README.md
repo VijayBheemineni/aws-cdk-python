@@ -109,3 +109,5 @@ Steps
 Solution
 - After deleting above resources, again execute bootstrap command `cdk bootstrap 193229017848/us-west-2`
 
+# References
+- Based on the Udemy Course :- https://www.udemy.com/course/aws-cdk-for-professionals
